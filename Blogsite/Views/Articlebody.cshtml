@@ -1,0 +1,49 @@
+@{
+    var item = Sitecore.Context.Database.GetItem("{F42C601E-CEE1-4431-A78E-78D06CCC5D0C}");
+}
+@{
+    var item1 = Sitecore.Context.Database.GetItem("{F55CA503-F288-409D-8966-9B8F1A0596AA}");
+}
+@{
+    var item2 = Sitecore.Context.Database.GetItem("{A69DE928-AD66-4C36-811B-B356EF0E817B}");
+}
+
+
+
+<div class="row">
+    <div class="blog-post-card card col-lg-4">
+        @Html.Sitecore().Field("ArticleSmallimage")
+        <div class="card-body bg-light">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3>@Html.Sitecore().Field("Title") </h3>
+            <div class="mb-1 text-muted">@Html.Sitecore().Field("postedDate", new { format = "MMM\ndd,\nyyyy" })</div>
+            <p>@Html.Sitecore().Field("ShortDescription")</p>
+            <a href="BlogDetail" target="_blank" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>
+        </div>
+    </div>
+    <div class="blog-post-card card col-lg-4">
+        @Html.Sitecore().Field("ArticleSmallimage", item1)
+        <div class="card-body bg-light">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3>@Html.Sitecore().Field("Title") </h3>
+            <div class="mb-1 text-muted">@Html.Sitecore().Field("postedDate", new { format = "MMM\ndd,\nyyyy" })</div>
+            <p>@Html.Sitecore().Field("ShortDescription")</p>
+            <a href="BlogDetail" target="_blank" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>
+        </div>
+    </div>
+    <div class="blog-post-card card col-lg-4">
+        @Html.Sitecore().Field("ArticleSmallimage", item2)
+        <div class="card-body bg-light">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3>@Html.Sitecore().Field("Title") </h3>
+            <div class="mb-1 text-muted">@Html.Sitecore().Field("postedDate", new { format = "MMM\ndd,\nyyyy" })</div>
+            <p>@Html.Sitecore().Field("ShortDescription")</p>
+            <a href="BlogDetail" target="_blank" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>
+        </div>
+    </div>
+
+
+
+</div>
+
+

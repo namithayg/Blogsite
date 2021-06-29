@@ -1,0 +1,25 @@
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@{
+    Layout = null;
+}
+
+
+
+<html>
+<head>
+
+    <title>Sitecore Powered Blog</title>
+
+    <link rel="stylesheet" href="~/assets/css/bootstrap-themed.min.css">
+
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        @Html.Sitecore().Placeholder("phMain")
+    </div>
+</body>
+</html>

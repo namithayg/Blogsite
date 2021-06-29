@@ -1,0 +1,27 @@
+@{
+    var item = Sitecore.Context.Database.GetItem("{9B2703B6-D25E-4077-A1D0-30CC2F668336}");
+}
+
+@{
+    var item1 = Sitecore.Context.Database.GetItem("{5BA46E95-F71A-4B40-8F9E-F37C17CB4D92}");
+}
+
+<div class="row">
+    <div class="blog-post-detail-card card col-lg-12">
+        @Html.Sitecore().Field("ArticleLargeImage", item)
+        <div class="card-body bg-light">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3>@Html.Sitecore().Field("title", item) </h3>
+            <div class="mb-1 text-muted">@Html.Sitecore().Field("postedDate", new { format = "MMM\ndd,\nyyyy" })</div>
+            <p>@Html.Sitecore().Field("LongDescription", item)</p>
+
+            <div class="blog-detail-tag-list">
+                <span class="read-more-heading">Read more: </span>
+                <a class="btn btn-info" role="button">@Html.Sitecore().Field("TagName", item1)</a>
+                <a class="btn btn-info" role="button">@Html.Sitecore().Field("TagDescription", item1)</a>
+                <a class="btn btn-info" role="button">@Html.Sitecore().Field("TagName", item1)</a>
+            </div>
+        </div>
+    </div>
+</div>
+

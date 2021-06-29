@@ -1,0 +1,13 @@
+@{
+    var item = Sitecore.Context.Database.GetItem("{DB7BDA20-D20B-475D-B572-A122F290453C}");
+}
+
+
+<div class="jumbotron text-white bg-primary">
+    <h1 class="display-3">
+        @Html.Sitecore().Field("HeaderTitle", item)</h1>
+        <br />
+        <p class="lead"> @Html.Sitecore().Field("HeaderSubtitle", item)</p>
+</div>
+
+
